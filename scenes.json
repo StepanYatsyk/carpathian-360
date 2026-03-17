@@ -18,11 +18,11 @@
       "type": "equirectangular",
       "panorama": "panoramas/goverla.jpg",
       "pitch": -1,
-      "yaw": 120,
+      "yaw": 140,
       "hotSpots": [
         {
-          "pitch": -5,
-          "yaw": 140,
+          "pitch": -10,
+          "yaw": 130,
           "type": "scene",
           "text": "До Заросляка",
           "sceneId": "zar"
@@ -34,11 +34,11 @@
       "type": "equirectangular",
       "panorama": "panoramas/zar.jpg",
       "pitch": 10,
-      "yaw": 170,
+      "yaw": 160,
       "hotSpots": [
         {
-          "pitch": 20,
-          "yaw": 50,
+          "pitch": 15,
+          "yaw": 150,
           "type": "scene",
           "text": "На Говерлу",
           "sceneId": "goverla"
