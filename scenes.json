@@ -35,8 +35,8 @@
           "sceneId": "shp"
         },
         {
-          "pitch": -5,
-          "yaw": -100,
+          "pitch": 0,
+          "yaw": -141,
           "type": "scene",
           "text": "Озеро Несамовите",
           "sceneId": "nes"
@@ -65,8 +65,8 @@
           "sceneId": "zar"
         },
         {
-          "pitch": 5,
-          "yaw": 10,
+          "pitch": -6,
+          "yaw": -115,
           "type": "scene",
           "text": "До озера Несамовите",
           "sceneId": "nes"
@@ -81,15 +81,15 @@
       "yaw": 0,   
       "hotSpots": [
         {
-          "pitch": 10,
-          "yaw": 45,
+          "pitch": 5,
+          "yaw": 20,
           "type": "scene",
           "text": "На Говерлу",
           "sceneId": "goverla"
         },
         {
-          "pitch": 10,
-          "yaw": -45,
+          "pitch": 22,
+          "yaw": 167,
           "type": "scene",
           "text": "На Шпиці",
           "sceneId": "shp"
