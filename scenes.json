@@ -21,8 +21,8 @@
       "yaw": 45,
       "hotSpots": [
         {
-          "pitch": -15,
-          "yaw": 170,
+          "pitch": -5,
+          "yaw": 140,
           "type": "scene",
           "text": "До Заросляка",
           "sceneId": "zar"
@@ -38,7 +38,7 @@
       "hotSpots": [
         {
           "pitch": 20,
-          "yaw": 0,
+          "yaw": 50,
           "type": "scene",
           "text": "На Говерлу",
           "sceneId": "goverla"
