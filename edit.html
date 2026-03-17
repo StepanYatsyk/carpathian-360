@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПАНЕЛЬ КОРЕГУВАННЯ - Карпати 360</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #000; }
+        #panorama { width: 100%; height: 100vh; }
+        
+        /* Панель інструментів розробника */
+        #dev-panel {
+            position: absolute; top: 15px; right: 15px; z-index: 2000;
+            background: rgba(255, 140, 0, 0.95); color: black; 
+            padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 2px solid #fff;
+        }
+        .coord-line { font-size: 18px; font-weight: bold; margin-bottom: 5px; }
+        .hint { font-size: 11px; color: #333; margin-top: 5px; border-top: 1px solid #000; padding-top: 5px; }
+
+        #controls {
+            position: absolute; bottom: 25px; left: 15px; z-index: 1000;
+            background: rgba(0, 0, 0, 0.7); padding: 10px; border-radius: 6px;
+        }
+        select { background: #333; color: white; border: 1px solid #555; padding: 8px; cursor: pointer; border-radius: 4px; }
+        
+        /* Вимикаємо зайві написи */
+        .pnlm-panorama-info { display: none !important; }
+    </style>
+</head>
+<body>
+
+<div id="dev-panel">
+    <div class="coord-line" id="display-pitch">Pitch: 0.00</div>
+    <div class="coord-line" id="display-yaw">Yaw: 0.00</div>
+    <div class="hint">Наведіть центр на об'єкт<br>і перепишіть ці цифри в JSON</div>
+</div>
+
+<div id="controls">
+    <select id="sceneList"></select>
+</div>
+
+<div id="panorama"></div>
+
+<script>
+    fetch('scenes.json')
+        .then(response => response.json())
+        .then(data => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const startScene = urlParams.get('scene') || data.default.firstScene;
+
+            window.viewer = pannellum.viewer('panorama', {
+                "default": data.default,
+                "scenes": data.scenes,
+                "showSceneCaption": false,
+                "hotSpotDebug": true // Плюсик завжди увімкнений тут
+            });
+
+            viewer.loadScene(startScene);
+
+            // Оновлення цифр на панелі
+            const pText = document.getElementById('display-pitch');
+            const yText = document.getElementById('display-yaw');
+            
+            setInterval(() => {
+                if(window.viewer) {
+                    pText.innerText = `Pitch: ${viewer.getPitch().toFixed(2)}`;
+                    yText.innerText = `Yaw: ${viewer.getYaw().toFixed(2)}`;
+                }
+            }, 50);
+
+            const select = document.getElementById('sceneList');
+            Object.keys(data.scenes).forEach(id => {
+                const option = document.createElement('option');
+                option.value = id;
+                option.text = data.scenes[id].title;
+                if (id === startScene) option.selected = true;
+                select.appendChild(option);
+            });
+
+            viewer.on('scenechange', (id) => { select.value = id; });
+            select.addEventListener('change', (e) => { viewer.loadScene(e.target.value); });
+        })
+        .catch(err => console.error("Помилка:", err));
+</script>
+</body>
+</html>
