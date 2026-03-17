@@ -26,6 +26,13 @@
           "type": "scene",
           "text": "До Заросляка",
           "sceneId": "zar"
+        },
+        {
+          "pitch": -1,
+          "yaw": -149,
+          "type": "scene",
+          "text": "На Шпиці",
+          "sceneId": "shp"
         }
       ]
     },
@@ -33,15 +40,22 @@
       "title": "Шпиці",
       "type": "equirectangular",
       "panorama": "panoramas/shp.jpg",
-      "pitch": 0,   
-      "yaw": 0,   
+      "pitch": -22,   
+      "yaw": 72,   
       "hotSpots": [
         {
-          "pitch": -10,
-          "yaw": 120,
+          "pitch": 0,
+          "yaw": -82,
           "type": "scene",
           "text": "Повернутись на Говерлу",
           "sceneId": "goverla"
+        },
+        {
+          "pitch": -7,
+          "yaw": -58,
+          "type": "scene",
+          "text": "Заросляк",
+          "sceneId": "zar"
         }
       ]
     },
