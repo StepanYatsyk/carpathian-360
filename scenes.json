@@ -36,7 +36,7 @@
         }
       ]
     },
-    "shpyci": {
+    "shp": {
       "title": "Шпиці",
       "type": "equirectangular",
       "panorama": "panoramas/shp.jpg",
