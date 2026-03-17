@@ -1,0 +1,42 @@
+{
+  "default": {
+    "firstScene": "goverla",
+    "author": "Stepan Yatsyk",
+    "autoLoad": true,
+    "hfov": 110,
+    "compass": false,
+    "gyroscope": true,
+    "sceneFadeDuration": 1000,
+    "crossOrigin": "anonymous"
+  },
+  "scenes": {
+    "goverla": {
+      "title": "Гора Говерла",
+      "type": "equirectangular",
+      "panorama": "panoramas/goverla.jpg",
+      "hotSpots": [
+        {
+          "pitch": -15,
+          "yaw": 170,
+          "type": "scene",
+          "text": "До Заросляка",
+          "sceneId": "zar"
+        }
+      ]
+    },
+    "zar": {
+      "title": "База Заросляк",
+      "type": "equirectangular",
+      "panorama": "panoramas/zar.jpg",
+      "hotSpots": [
+        {
+          "pitch": 20,
+          "yaw": 0,
+          "type": "scene",
+          "text": "На Говерлу",
+          "sceneId": "goverla"
+        }
+      ]
+    }
+  }
+}
