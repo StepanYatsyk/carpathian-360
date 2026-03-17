@@ -8,7 +8,10 @@
     "gyroscope": true,
     "sceneFadeDuration": 1000,
     "crossOrigin": "anonymous",
-    "hotSpotDebug": true
+    "hotSpotDebug": true,
+    "autoRotate": -2,
+    "autoRotateInactivityDelay": 5000,
+    "autoRotateStopDelay": 0
   },
   "scenes": {
     "goverla": {
