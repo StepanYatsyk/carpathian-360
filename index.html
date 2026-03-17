@@ -9,11 +9,31 @@
     <style>
         body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #000; }
         #panorama { width: 100%; height: 100vh; }
+        
+        /* Стиль для меню вибору */
         #controls {
-            position: absolute; bottom: 20px; left: 20px; z-index: 100;
-            background: rgba(0, 0, 0, 0.7); padding: 10px; border-radius: 5px;
+            position: absolute; 
+            bottom: 25px; 
+            left: 15px; 
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.6); 
+            padding: 8px; 
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        select { background: #333; color: white; border: 1px solid #555; padding: 5px; cursor: pointer; border-radius: 3px; }
+        select { 
+            background: #222; 
+            color: white; 
+            border: none; 
+            padding: 6px 10px; 
+            cursor: pointer; 
+            border-radius: 4px;
+            font-family: sans-serif;
+            font-size: 14px;
+            outline: none;
+        }
+        /* Ховаємо стандартні написи Pannellum, що накладаються */
+        .pnlm-panorama-info { display: none !important; }
     </style>
 </head>
 <body>
@@ -25,37 +45,33 @@
 <div id="panorama"></div>
 
 <script>
-    // 1. Завантажуємо наш JSON файл
     fetch('scenes.json')
         .then(response => response.json())
         .then(data => {
             const urlParams = new URLSearchParams(window.location.search);
             const startScene = urlParams.get('scene') || data.default.firstScene;
 
-            // 2. Ініціалізація Pannellum з даними з JSON
             window.viewer = pannellum.viewer('panorama', {
                 "default": data.default,
-                "scenes": data.scenes
+                "scenes": data.scenes,
+                "showSceneCaption": false // Вимикає автоматичну назву сцени
             });
 
-            // Встановлюємо початкову сцену
             viewer.loadScene(startScene);
 
-            // 3. Автоматично наповнюємо меню вибору гір
             const select = document.getElementById('sceneList');
             Object.keys(data.scenes).forEach(id => {
                 const option = document.createElement('option');
                 option.value = id;
-                option.text = data.scenes[id].title;
+                option.text = data.scenes[id].title; // Бере назву з JSON для списку
                 if (id === startScene) option.selected = true;
                 select.appendChild(option);
             });
 
-            // Оновлюємо меню, якщо перейшли по стрілці
             viewer.on('scenechange', (id) => { select.value = id; });
             select.addEventListener('change', (e) => { viewer.loadScene(e.target.value); });
         })
-        .catch(err => console.error("Помилка завантаження JSON:", err));
+        .catch(err => console.error("Помилка JSON:", err));
 </script>
 </body>
 </html>
