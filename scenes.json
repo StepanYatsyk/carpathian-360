@@ -29,6 +29,22 @@
         }
       ]
     },
+    "shpyci": {
+      "title": "Шпиці",
+      "type": "equirectangular",
+      "panorama": "panoramas/shp.jpg",
+      "pitch": 0,   
+      "yaw": 0,   
+      "hotSpots": [
+        {
+          "pitch": -10,
+          "yaw": 120,
+          "type": "scene",
+          "text": "Повернутись на Говерлу",
+          "sceneId": "goverla"
+        }
+      ]
+    }
     "zar": {
       "title": "База Заросляк",
       "type": "equirectangular",
