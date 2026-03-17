@@ -9,64 +9,53 @@
     <style>
         body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #000; }
         #panorama { width: 100%; height: 100vh; }
-        
-        /* Стиль для меню вибору вершин */
         #controls {
             position: absolute; bottom: 20px; left: 20px; z-index: 100;
             background: rgba(0, 0, 0, 0.7); padding: 10px; border-radius: 5px;
         }
-        select { background: #333; color: white; border: 1px solid #555; padding: 5px; cursor: pointer; }
+        select { background: #333; color: white; border: 1px solid #555; padding: 5px; cursor: pointer; border-radius: 3px; }
     </style>
 </head>
 <body>
 
 <div id="controls">
-    <select id="sceneList" onchange="viewer.loadScene(this.value);">
-        <option value="goverla">Гора Говерла</option>
-        <option value="zar">База Заросляк</option>
-        </select>
+    <select id="sceneList"></select>
 </div>
 
 <div id="panorama"></div>
 
 <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const sceneId = urlParams.get('scene') || 'goverla';
+    // 1. Завантажуємо наш JSON файл
+    fetch('scenes.json')
+        .then(response => response.json())
+        .then(data => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const startScene = urlParams.get('scene') || data.default.firstScene;
 
-    const viewer = pannellum.viewer('panorama', {
-        "default": {
-            "firstScene": sceneId,
-            "autoLoad": true,
-            "hfov": 110,           // Максимально широкий кут (стандартно 100)
-            "compass": false,      // ПРИБИРАЄМО КОМПАС
-            "gyroscope": true,
-            "sceneFadeDuration": 1000,
-            "crossOrigin": "anonymous"
-        },
-        "scenes": {
-            "goverla": {
-                "title": "Гора Говерла",
-                "type": "equirectangular",
-                "panorama": "panoramas/goverla.jpg",
-                "hotSpots": [
-                    { "pitch": -15, "yaw": 170, "type": "scene", "text": "До Заросляка", "sceneId": "zar" }
-                ]
-            },
-            "zar": {
-                "title": "База Заросляк",
-                "type": "equirectangular",
-                "panorama": "panoramas/zar.jpg",
-                "hotSpots": [
-                    { "pitch": 20, "yaw": 0, "type": "scene", "text": "На Говерлу", "sceneId": "goverla" }
-                ]
-            }
-        }
-    });
+            // 2. Ініціалізація Pannellum з даними з JSON
+            window.viewer = pannellum.viewer('panorama', {
+                "default": data.default,
+                "scenes": data.scenes
+            });
 
-    // Оновлюємо вибір у меню при переході через стрілки
-    viewer.on('scenechange', function(id) {
-        document.getElementById('sceneList').value = id;
-    });
+            // Встановлюємо початкову сцену
+            viewer.loadScene(startScene);
+
+            // 3. Автоматично наповнюємо меню вибору гір
+            const select = document.getElementById('sceneList');
+            Object.keys(data.scenes).forEach(id => {
+                const option = document.createElement('option');
+                option.value = id;
+                option.text = data.scenes[id].title;
+                if (id === startScene) option.selected = true;
+                select.appendChild(option);
+            });
+
+            // Оновлюємо меню, якщо перейшли по стрілці
+            viewer.on('scenechange', (id) => { select.value = id; });
+            select.addEventListener('change', (e) => { viewer.loadScene(e.target.value); });
+        })
+        .catch(err => console.error("Помилка завантаження JSON:", err));
 </script>
 </body>
 </html>
