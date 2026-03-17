@@ -8,7 +8,6 @@
     "gyroscope": true,
     "sceneFadeDuration": 1000,
     "crossOrigin": "anonymous",
-    "hotSpotDebug": true,
     "autoRotate": -2,
     "autoRotateInactivityDelay": 5000,
     "autoRotateStopDelay": 0
