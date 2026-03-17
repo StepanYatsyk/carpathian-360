@@ -17,11 +17,11 @@
       "title": "Гора Говерла",
       "type": "equirectangular",
       "panorama": "panoramas/goverla.jpg",
-      "pitch": -1,
-      "yaw": 140,
+      "pitch": 0,
+      "yaw": 160,
       "hotSpots": [
         {
-          "pitch": -10,
+          "pitch": -7,
           "yaw": 130,
           "type": "scene",
           "text": "До Заросляка",
@@ -34,11 +34,11 @@
       "type": "equirectangular",
       "panorama": "panoramas/zar.jpg",
       "pitch": 10,
-      "yaw": 160,
+      "yaw": 133,
       "hotSpots": [
         {
-          "pitch": 15,
-          "yaw": 150,
+          "pitch": 7,
+          "yaw": 117,
           "type": "scene",
           "text": "На Говерлу",
           "sceneId": "goverla"
