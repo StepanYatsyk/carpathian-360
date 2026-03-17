@@ -18,6 +18,8 @@
       "title": "Гора Говерла",
       "type": "equirectangular",
       "panorama": "panoramas/goverla.jpg",
+      "pitch": -1,
+      "yaw": 45,
       "hotSpots": [
         {
           "pitch": -15,
@@ -32,6 +34,8 @@
       "title": "База Заросляк",
       "type": "equirectangular",
       "panorama": "panoramas/zar.jpg",
+      "pitch": 10,
+      "yaw": 45,
       "hotSpots": [
         {
           "pitch": 20,
