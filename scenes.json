@@ -33,6 +33,13 @@
           "type": "scene",
           "text": "На Шпиці",
           "sceneId": "shp"
+        },
+        {
+          "pitch": -5,
+          "yaw": -100,
+          "type": "scene",
+          "text": "Озеро Несамовите",
+          "sceneId": "nes"
         }
       ]
     },
@@ -56,6 +63,36 @@
           "type": "scene",
           "text": "Заросляк",
           "sceneId": "zar"
+        },
+        {
+          "pitch": 5,
+          "yaw": 10,
+          "type": "scene",
+          "text": "До озера Несамовите",
+          "sceneId": "nes"
+        }
+      ]
+    },
+    "nes": {
+      "title": "Озеро Несамовите",
+      "type": "equirectangular",
+      "panorama": "panoramas/nes.jpg",
+      "pitch": 0,   
+      "yaw": 0,   
+      "hotSpots": [
+        {
+          "pitch": 10,
+          "yaw": 45,
+          "type": "scene",
+          "text": "На Говерлу",
+          "sceneId": "goverla"
+        },
+        {
+          "pitch": 10,
+          "yaw": -45,
+          "type": "scene",
+          "text": "На Шпиці",
+          "sceneId": "shp"
         }
       ]
     },
