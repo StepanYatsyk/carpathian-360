@@ -18,7 +18,7 @@
       "type": "equirectangular",
       "panorama": "panoramas/goverla.jpg",
       "pitch": -1,
-      "yaw": 45,
+      "yaw": 120,
       "hotSpots": [
         {
           "pitch": -5,
@@ -34,7 +34,7 @@
       "type": "equirectangular",
       "panorama": "panoramas/zar.jpg",
       "pitch": 10,
-      "yaw": 45,
+      "yaw": 170,
       "hotSpots": [
         {
           "pitch": 20,
