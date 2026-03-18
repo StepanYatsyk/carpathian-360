@@ -1,6 +1,6 @@
 {
   "default": {
-    "firstScene": "goverla",
+    "firstScene": "tur",
     "author": "Stepan Yatsyk",
     "autoLoad": true,
     "hfov": 110,
@@ -13,6 +13,36 @@
     "autoRotateStopDelay": 0
   },
   "scenes": {
+     "tur": {
+      "title": "Туркул",
+      "type": "equirectangular",
+      "panorama": "panoramas/tur.jpg",
+      "pitch": 0,
+      "yaw": 160,
+      "hotSpots": [
+        {
+          "pitch": -7,
+          "yaw": 130,
+          "type": "scene",
+          "text": "Говерла",
+          "sceneId": "goverla"
+        },
+        {
+          "pitch": -1,
+          "yaw": -149,
+          "type": "scene",
+          "text": "На Шпиці",
+          "sceneId": "shp"
+        },
+        {
+          "pitch": 0,
+          "yaw": -141,
+          "type": "scene",
+          "text": "Озеро Несамовите",
+          "sceneId": "nes"
+        }
+      ]
+    },
     "goverla": {
       "title": "Гора Говерла",
       "type": "equirectangular",
