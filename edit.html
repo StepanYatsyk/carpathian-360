@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,7 @@
             background: rgba(255, 140, 0, 0.95); color: black; 
             padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 2px solid #fff;
+            pointer-events: none; /* Щоб панель не заважала клікати по панорамі */
         }
         .coord-line { font-size: 18px; font-weight: bold; margin-bottom: 5px; }
         .hint { font-size: 11px; color: #333; margin-top: 5px; border-top: 1px solid #000; padding-top: 5px; }
@@ -26,7 +27,22 @@
         }
         select { background: #333; color: white; border: 1px solid #555; padding: 8px; cursor: pointer; border-radius: 4px; }
         
-        /* Вимикаємо зайві написи */
+        /* НОВІ СТРІЛКИ: ВКАЗІВНИКИ ВНИЗ (для точного позиціонування) */
+        .pnlm-scene-indicator {
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/chevron-down.png') !important;
+            background-size: 70% !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            border: 2px solid #ffffff !important;
+            border-radius: 50% !important;
+            width: 40px !important;
+            height: 40px !important;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        /* Вимикаємо стандартні написи */
         .pnlm-panorama-info { display: none !important; }
     </style>
 </head>
@@ -55,7 +71,7 @@
                 "default": data.default,
                 "scenes": data.scenes,
                 "showSceneCaption": false,
-                "hotSpotDebug": true // Плюсик завжди увімкнений тут
+                "hotSpotDebug": true // Плюсик (центр) для точного наведення
             });
 
             viewer.loadScene(startScene);
@@ -80,7 +96,13 @@
                 select.appendChild(option);
             });
 
-            viewer.on('scenechange', (id) => { select.value = id; });
+            viewer.on('scenechange', (id) => { 
+                select.value = id; 
+                // Оновлюємо URL, щоб при перезавантаженні залишатися в тій же сцені
+                const newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?scene=' + id;
+                window.history.pushState({path:newurl},'',newurl);
+            });
+            
             select.addEventListener('change', (e) => { viewer.loadScene(e.target.value); });
         })
         .catch(err => console.error("Помилка:", err));
