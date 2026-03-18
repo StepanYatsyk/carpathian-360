@@ -55,18 +55,18 @@
       "type": "equirectangular",
       "panorama": "panoramas/pet.jpg",
       "pitch": 0,
-      "yaw": 160,
+      "yaw": 13,
       "hotSpots": [
         {
-          "pitch": 0,
-          "yaw": -82,
+          "pitch": 2,
+          "yaw": 51,
           "type": "scene",
           "text": "Говерла",
           "sceneId": "goverla"
         },
         {
-          "pitch": 0,
-          "yaw": -134,
+          "pitch": 2,
+          "yaw": 72,
           "type": "scene",
           "text": "Туркул",
           "sceneId": "tur"
