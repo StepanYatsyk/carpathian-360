@@ -44,6 +44,29 @@
       ]
     },
     "goverla": {
+      "title": "Петрос",
+      "type": "equirectangular",
+      "panorama": "panoramas/pet.jpg",
+      "pitch": 0,
+      "yaw": 160,
+      "hotSpots": [
+        {
+          "pitch": 0,
+          "yaw": -82,
+          "type": "scene",
+          "text": "Говерла",
+          "sceneId": "goverla"
+        },
+         {
+          "pitch": 0,
+          "yaw": -134,
+          "type": "scene",
+          "text": "Туркул",
+          "sceneId": "tur"
+        }
+      ]
+    }
+    "goverla": {
       "title": "Гора Говерла",
       "type": "equirectangular",
       "panorama": "panoramas/goverla.jpg",
