@@ -17,26 +17,26 @@
       "title": "Туркул",
       "type": "equirectangular",
       "panorama": "panoramas/tur.jpg",
-      "pitch": 0,
-      "yaw": 160,
+      "pitch": -12,
+      "yaw": 80,
       "hotSpots": [
         {
-          "pitch": -7,
-          "yaw": 130,
+          "pitch": 5,
+          "yaw": -100,
           "type": "scene",
           "text": "Говерла",
           "sceneId": "goverla"
         },
         {
-          "pitch": -1,
-          "yaw": -149,
+          "pitch": 0,
+          "yaw": 42,
           "type": "scene",
           "text": "На Шпиці",
           "sceneId": "shp"
         },
         {
-          "pitch": 0,
-          "yaw": -141,
+          "pitch": -14,
+          "yaw": 31,
           "type": "scene",
           "text": "Озеро Несамовите",
           "sceneId": "nes"
@@ -56,6 +56,13 @@
           "type": "scene",
           "text": "До Заросляка",
           "sceneId": "zar"
+        },
+         {
+          "pitch": 0,
+          "yaw": -134,
+          "type": "scene",
+          "text": "Туркул",
+          "sceneId": "tur"
         },
         {
           "pitch": -1,
@@ -88,6 +95,13 @@
           "sceneId": "goverla"
         },
         {
+          "pitch": 0,
+          "yaw": -121,
+          "type": "scene",
+          "text": "Туркул",
+          "sceneId": "tur"
+        },
+        {
           "pitch": -7,
           "yaw": -58,
           "type": "scene",
@@ -116,6 +130,13 @@
           "type": "scene",
           "text": "На Говерлу",
           "sceneId": "goverla"
+        },
+        {
+          "pitch": 13,
+          "yaw": -25,
+          "type": "scene",
+          "text": "Туркул",
+          "sceneId": "tur"
         },
         {
           "pitch": 22,
