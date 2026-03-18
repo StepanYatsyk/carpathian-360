@@ -28,8 +28,8 @@
           "sceneId": "goverla"
         },
         {
-          "pitch": 0,
-          "yaw": 42,
+          "pitch": -1,
+          "yaw": 30,
           "type": "scene",
           "text": "На Шпиці",
           "sceneId": "shp"
