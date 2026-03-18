@@ -74,7 +74,7 @@
       ]
     },
     "goverla": {
-      "title": "Гора Говерла",
+      "title": "Говерла",
       "type": "equirectangular",
       "panorama": "panoramas/goverla.jpg",
       "pitch": 0,
