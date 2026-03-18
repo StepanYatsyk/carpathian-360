@@ -47,6 +47,43 @@
           "type": "scene",
           "text": "Озеро Несамовите",
           "sceneId": "nes"
+        },
+        {
+          "pitch": 2,
+          "yaw": -110,
+          "type": "scene",
+          "text": "Данціж",
+          "sceneId": "dan"
+        }
+      ]
+    },
+    "dan": {
+      "title": "Данціж",
+      "type": "equirectangular",
+      "panorama": "panoramas/dan.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 5,
+          "yaw": 10,
+          "type": "scene",
+          "text": "Туркул",
+          "sceneId": "tur"
+        },
+        {
+          "pitch": 5,
+          "yaw": 30,
+          "type": "scene",
+          "text": "Говерла",
+          "sceneId": "goverla"
+        },
+        {
+          "pitch": 5,
+          "yaw": 50,
+          "type": "scene",
+          "text": "Петрос",
+          "sceneId": "pet"
         }
       ]
     },
@@ -114,6 +151,13 @@
           "type": "scene",
           "text": "Озеро Несамовите",
           "sceneId": "nes"
+        },
+        {
+          "pitch": 2,
+          "yaw": -120,
+          "type": "scene",
+          "text": "Данціж",
+          "sceneId": "dan"
         }
       ]
     },
