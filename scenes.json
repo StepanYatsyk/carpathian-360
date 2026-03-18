@@ -13,12 +13,12 @@
     "autoRotateStopDelay": 0
   },
   "scenes": {
-     "tur": {
+    "tur": {
       "title": "Туркул",
       "type": "equirectangular",
       "panorama": "panoramas/tur.jpg",
-      "pitch": -12,
-      "yaw": 80,
+      "pitch": -16,
+      "yaw": -22,
       "hotSpots": [
         {
           "pitch": 5,
@@ -35,6 +35,13 @@
           "sceneId": "shp"
         },
         {
+          "pitch": 3,
+          "yaw": -127,
+          "type": "scene",
+          "text": "Петрос",
+          "sceneId": "pet"
+        },
+        {
           "pitch": -14,
           "yaw": 31,
           "type": "scene",
@@ -43,7 +50,7 @@
         }
       ]
     },
-    "goverla": {
+    "pet": {
       "title": "Петрос",
       "type": "equirectangular",
       "panorama": "panoramas/pet.jpg",
@@ -57,7 +64,7 @@
           "text": "Говерла",
           "sceneId": "goverla"
         },
-         {
+        {
           "pitch": 0,
           "yaw": -134,
           "type": "scene",
@@ -65,7 +72,7 @@
           "sceneId": "tur"
         }
       ]
-    }
+    },
     "goverla": {
       "title": "Гора Говерла",
       "type": "equirectangular",
@@ -80,7 +87,14 @@
           "text": "До Заросляка",
           "sceneId": "zar"
         },
-         {
+        {
+          "pitch": 1,
+          "yaw": 0,
+          "type": "scene",
+          "text": "Петрос",
+          "sceneId": "pet"
+        },
+        {
           "pitch": 0,
           "yaw": -134,
           "type": "scene",
@@ -107,8 +121,8 @@
       "title": "Шпиці",
       "type": "equirectangular",
       "panorama": "panoramas/shp.jpg",
-      "pitch": -22,   
-      "yaw": 72,   
+      "pitch": -22,
+      "yaw": 72,
       "hotSpots": [
         {
           "pitch": 0,
@@ -144,8 +158,8 @@
       "title": "Озеро Несамовите",
       "type": "equirectangular",
       "panorama": "panoramas/nes.jpg",
-      "pitch": 0,   
-      "yaw": 0,   
+      "pitch": 0,
+      "yaw": 0,
       "hotSpots": [
         {
           "pitch": 5,
