@@ -79,8 +79,15 @@
       "yaw": 0,
       "hotSpots": [
         {
+          "pitch": -5,
+          "yaw": 79,
+          "type": "scene",
+          "text": "На Шпиці",
+          "sceneId": "shp"
+        },
+        {
           "pitch": 0,
-          "yaw": 180,
+          "yaw": -147,
           "type": "scene",
           "text": "Повернутись на Туркул",
           "sceneId": "tur"
