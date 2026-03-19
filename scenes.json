@@ -56,15 +56,15 @@
           "sceneId": "dan"
         },
         {
-          "pitch": 0,
-          "yaw": 60,
+          "pitch": 1,
+          "yaw": 73,
           "type": "scene",
           "text": "Ребра",
           "sceneId": "reb"
         },
         {
           "pitch": 0,
-          "yaw": 80,
+          "yaw": 143,
           "type": "scene",
           "text": "Піп Іван Мармароський",
           "sceneId": "pim"
@@ -91,12 +91,12 @@
       "title": "Піп Іван Мармароський",
       "type": "equirectangular",
       "panorama": "panoramas/pim.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": 4,
+      "yaw": -10,
       "hotSpots": [
         {
           "pitch": 0,
-          "yaw": 180,
+          "yaw": 110,
           "type": "scene",
           "text": "Повернутись на Туркул",
           "sceneId": "tur"
@@ -222,6 +222,13 @@
           "sceneId": "goverla"
         },
         {
+          "pitch": 10,
+          "yaw": 152,
+          "type": "scene",
+          "text": "Ребра",
+          "sceneId": "reb"
+        },
+        {
           "pitch": 0,
           "yaw": -121,
           "type": "scene",
@@ -243,8 +250,8 @@
           "sceneId": "nes"
         },
         {
-          "pitch": -10,
-          "yaw": 50,
+          "pitch": -33,
+          "yaw": 71,
           "type": "scene",
           "text": "Під Шпицями",
           "sceneId": "pshp"
@@ -259,8 +266,15 @@
       "yaw": 0,
       "hotSpots": [
         {
-          "pitch": 15,
-          "yaw": 0,
+          "pitch": 18,
+          "yaw": -102,
+          "type": "scene",
+          "text": "Ребра",
+          "sceneId": "reb"
+        },
+        {
+          "pitch": 30,
+          "yaw": -3,
           "type": "scene",
           "text": "Вийти на Шпиці",
           "sceneId": "shp"
