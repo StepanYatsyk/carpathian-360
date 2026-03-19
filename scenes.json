@@ -54,6 +54,52 @@
           "type": "scene",
           "text": "Данціж",
           "sceneId": "dan"
+        },
+        {
+          "pitch": 0,
+          "yaw": 60,
+          "type": "scene",
+          "text": "Ребра",
+          "sceneId": "reb"
+        },
+        {
+          "pitch": 0,
+          "yaw": 80,
+          "type": "scene",
+          "text": "Піп Іван Мармароський",
+          "sceneId": "pim"
+        }
+      ]
+    },
+    "reb": {
+      "title": "Ребра",
+      "type": "equirectangular",
+      "panorama": "panoramas/reb.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 0,
+          "yaw": 180,
+          "type": "scene",
+          "text": "Повернутись на Туркул",
+          "sceneId": "tur"
+        }
+      ]
+    },
+    "pim": {
+      "title": "Піп Іван Мармароський",
+      "type": "equirectangular",
+      "panorama": "panoramas/pim.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 0,
+          "yaw": 180,
+          "type": "scene",
+          "text": "Повернутись на Туркул",
+          "sceneId": "tur"
         }
       ]
     },
@@ -195,6 +241,29 @@
           "type": "scene",
           "text": "До озера Несамовите",
           "sceneId": "nes"
+        },
+        {
+          "pitch": -10,
+          "yaw": 50,
+          "type": "scene",
+          "text": "Під Шпицями",
+          "sceneId": "pshp"
+        }
+      ]
+    },
+    "pshp": {
+      "title": "Під Шпицями",
+      "type": "equirectangular",
+      "panorama": "panoramas/pshp.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 15,
+          "yaw": 0,
+          "type": "scene",
+          "text": "Вийти на Шпиці",
+          "sceneId": "shp"
         }
       ]
     },
