@@ -75,9 +75,16 @@
       "title": "Ребра",
       "type": "equirectangular",
       "panorama": "panoramas/reb.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": -10,
+      "yaw": -117,
       "hotSpots": [
+         {
+          "pitch": 3,
+          "yaw": -127,
+          "type": "scene",
+          "text": "Говерла",
+          "sceneId": "goverla"
+        },
         {
           "pitch": -5,
           "yaw": 79,
