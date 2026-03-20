@@ -68,6 +68,105 @@
           "type": "scene",
           "text": "Піп Іван Мармароський",
           "sceneId": "pim"
+        },
+        {
+          "pitch": 0,
+          "yaw": 170,
+          "type": "scene",
+          "text": "Хом'як",
+          "sceneId": "hom"
+        }
+      ]
+    },
+    "hom": {
+      "title": "Хом'як",
+      "type": "equirectangular",
+      "panorama": "panoramas/hom.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 0,
+          "yaw": 180,
+          "type": "scene",
+          "text": "Туркул",
+          "sceneId": "tur"
+        },
+        {
+          "pitch": 5,
+          "yaw": -20,
+          "type": "scene",
+          "text": "Синяк",
+          "sceneId": "syn"
+        }
+      ]
+    },
+    "syn": {
+      "title": "Синяк",
+      "type": "equirectangular",
+      "panorama": "panoramas/syn.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 5,
+          "yaw": -30,
+          "type": "scene",
+          "text": "Малий Ґорґан",
+          "sceneId": "gor"
+        },
+        {
+          "pitch": 0,
+          "yaw": 160,
+          "type": "scene",
+          "text": "Хом'як",
+          "sceneId": "hom"
+        }
+      ]
+    },
+    "gor": {
+      "title": "Малий Ґорґан",
+      "type": "equirectangular",
+      "panorama": "panoramas/gor.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 5,
+          "yaw": -40,
+          "type": "scene",
+          "text": "Довбушанка",
+          "sceneId": "dov"
+        },
+        {
+          "pitch": 0,
+          "yaw": 150,
+          "type": "scene",
+          "text": "Синяк",
+          "sceneId": "syn"
+        }
+      ]
+    },
+    "dov": {
+      "title": "Довбушанка",
+      "type": "equirectangular",
+      "panorama": "panoramas/dov.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 0,
+          "yaw": 140,
+          "type": "scene",
+          "text": "Малий Ґорґан",
+          "sceneId": "gor"
+        },
+        {
+          "pitch": 0,
+          "yaw": 180,
+          "type": "scene",
+          "text": "Туркул",
+          "sceneId": "tur"
         }
       ]
     },
@@ -78,7 +177,7 @@
       "pitch": -10,
       "yaw": -117,
       "hotSpots": [
-         {
+        {
           "pitch": 3,
           "yaw": -127,
           "type": "scene",
