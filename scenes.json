@@ -70,8 +70,8 @@
           "sceneId": "pim"
         },
         {
-          "pitch": 0,
-          "yaw": 170,
+          "pitch": 2,
+          "yaw": -75,
           "type": "scene",
           "text": "Хом'як",
           "sceneId": "hom"
