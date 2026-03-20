@@ -82,19 +82,19 @@
       "title": "Хом'як",
       "type": "equirectangular",
       "panorama": "panoramas/hom.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": -12,
+      "yaw": 70,
       "hotSpots": [
         {
-          "pitch": 0,
-          "yaw": 180,
+          "pitch": 4,
+          "yaw": -60,
           "type": "scene",
           "text": "Туркул",
           "sceneId": "tur"
         },
         {
-          "pitch": 5,
-          "yaw": -20,
+          "pitch": 2,
+          "yaw": 77,
           "type": "scene",
           "text": "Синяк",
           "sceneId": "syn"
@@ -105,19 +105,19 @@
       "title": "Синяк",
       "type": "equirectangular",
       "panorama": "panoramas/syn.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": -2,
+      "yaw": 74,
       "hotSpots": [
         {
-          "pitch": 5,
-          "yaw": -30,
+          "pitch": -1,
+          "yaw": 60,
           "type": "scene",
           "text": "Малий Ґорґан",
           "sceneId": "gor"
         },
         {
-          "pitch": 0,
-          "yaw": 160,
+          "pitch": 3,
+          "yaw": -113,
           "type": "scene",
           "text": "Хом'як",
           "sceneId": "hom"
@@ -128,19 +128,19 @@
       "title": "Малий Ґорґан",
       "type": "equirectangular",
       "panorama": "panoramas/gor.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": -3,
+      "yaw": 20,
       "hotSpots": [
         {
-          "pitch": 5,
-          "yaw": -40,
+          "pitch": 6,
+          "yaw": 25,
           "type": "scene",
           "text": "Довбушанка",
           "sceneId": "dov"
         },
         {
-          "pitch": 0,
-          "yaw": 150,
+          "pitch": 5,
+          "yaw": -147,
           "type": "scene",
           "text": "Синяк",
           "sceneId": "syn"
@@ -151,19 +151,19 @@
       "title": "Довбушанка",
       "type": "equirectangular",
       "panorama": "panoramas/dov.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": -18,
+      "yaw": 13,
       "hotSpots": [
         {
-          "pitch": 0,
-          "yaw": 140,
+          "pitch": 2,
+          "yaw": -24,
           "type": "scene",
           "text": "Малий Ґорґан",
           "sceneId": "gor"
         },
         {
-          "pitch": 0,
-          "yaw": 180,
+          "pitch": 2,
+          "yaw": 11,
           "type": "scene",
           "text": "Туркул",
           "sceneId": "tur"
@@ -185,8 +185,8 @@
           "sceneId": "goverla"
         },
         {
-          "pitch": -5,
-          "yaw": 79,
+          "pitch": -4,
+          "yaw": -85,
           "type": "scene",
           "text": "На Шпиці",
           "sceneId": "shp"
