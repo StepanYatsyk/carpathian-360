@@ -78,7 +78,7 @@
         },
         {
           "pitch": 0,
-          "yaw": 160,
+          "yaw": 126,
           "type": "scene",
           "text": "Неняска",
           "sceneId": "nen"
@@ -100,15 +100,15 @@
           "sceneId": "tur"
         },
         {
-          "pitch": 0,
-          "yaw": -45,
+          "pitch": -1,
+          "yaw": 131,
           "type": "scene",
           "text": "Неняска",
           "sceneId": "nen"
         },
         {
           "pitch": 0,
-          "yaw": -15,
+          "yaw": 48,
           "type": "scene",
           "text": "Берелебашка",
           "sceneId": "ber"
@@ -119,26 +119,26 @@
       "title": "Неняска",
       "type": "equirectangular",
       "panorama": "panoramas/neniska.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": -20,
+      "yaw": 115,
       "hotSpots": [
         {
-          "pitch": 0,
-          "yaw": 180,
+          "pitch": 1,
+          "yaw": 93,
           "type": "scene",
           "text": "Піп Іван Мармароський",
           "sceneId": "pim"
         },
         {
           "pitch": 0,
-          "yaw": 45,
+          "yaw": -54,
           "type": "scene",
           "text": "Рогеска",
           "sceneId": "rog"
         },
         {
-          "pitch": 2,
-          "yaw": -90,
+          "pitch": 3,
+          "yaw": -139,
           "type": "scene",
           "text": "Туркул",
           "sceneId": "tur"
@@ -149,19 +149,19 @@
       "title": "Берелебашка",
       "type": "equirectangular",
       "panorama": "panoramas/berlebashka.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": -15,
+      "yaw": 100,
       "hotSpots": [
         {
-          "pitch": 0,
-          "yaw": 160,
+          "pitch": 7,
+          "yaw": -66,
           "type": "scene",
           "text": "Піп Іван Мармароський",
           "sceneId": "pim"
         },
         {
-          "pitch": 2,
-          "yaw": -120,
+          "pitch": 0,
+          "yaw": -161,
           "type": "scene",
           "text": "Туркул",
           "sceneId": "tur"
@@ -172,19 +172,19 @@
       "title": "Рогеска",
       "type": "equirectangular",
       "panorama": "panoramas/rogeska.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": 7,
+      "yaw": -43,
       "hotSpots": [
         {
-          "pitch": 0,
-          "yaw": -135,
+          "pitch": 4,
+          "yaw": -125,
           "type": "scene",
           "text": "Неняска",
           "sceneId": "nen"
         },
         {
-          "pitch": 2,
-          "yaw": 180,
+          "pitch": 6,
+          "yaw": -34,
           "type": "scene",
           "text": "Туркул",
           "sceneId": "tur"
