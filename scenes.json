@@ -75,6 +75,119 @@
           "type": "scene",
           "text": "Хом'як",
           "sceneId": "hom"
+        },
+        {
+          "pitch": 0,
+          "yaw": 160,
+          "type": "scene",
+          "text": "Неняска",
+          "sceneId": "nen"
+        }
+      ]
+    },
+    "pim": {
+      "title": "Піп Іван Мармароський",
+      "type": "equirectangular",
+      "panorama": "panoramas/pim.jpg",
+      "pitch": 4,
+      "yaw": -10,
+      "hotSpots": [
+        {
+          "pitch": 0,
+          "yaw": 110,
+          "type": "scene",
+          "text": "Повернутись на Туркул",
+          "sceneId": "tur"
+        },
+        {
+          "pitch": 0,
+          "yaw": -45,
+          "type": "scene",
+          "text": "Неняска",
+          "sceneId": "nen"
+        },
+        {
+          "pitch": 0,
+          "yaw": -15,
+          "type": "scene",
+          "text": "Берелебашка",
+          "sceneId": "ber"
+        }
+      ]
+    },
+    "nen": {
+      "title": "Неняска",
+      "type": "equirectangular",
+      "panorama": "panoramas/neniska.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 0,
+          "yaw": 180,
+          "type": "scene",
+          "text": "Піп Іван Мармароський",
+          "sceneId": "pim"
+        },
+        {
+          "pitch": 0,
+          "yaw": 45,
+          "type": "scene",
+          "text": "Рогеска",
+          "sceneId": "rog"
+        },
+        {
+          "pitch": 2,
+          "yaw": -90,
+          "type": "scene",
+          "text": "Туркул",
+          "sceneId": "tur"
+        }
+      ]
+    },
+    "ber": {
+      "title": "Берелебашка",
+      "type": "equirectangular",
+      "panorama": "panoramas/berlebashka.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 0,
+          "yaw": 160,
+          "type": "scene",
+          "text": "Піп Іван Мармароський",
+          "sceneId": "pim"
+        },
+        {
+          "pitch": 2,
+          "yaw": -120,
+          "type": "scene",
+          "text": "Туркул",
+          "sceneId": "tur"
+        }
+      ]
+    },
+    "rog": {
+      "title": "Рогеска",
+      "type": "equirectangular",
+      "panorama": "panoramas/rogeska.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        {
+          "pitch": 0,
+          "yaw": -135,
+          "type": "scene",
+          "text": "Неняска",
+          "sceneId": "nen"
+        },
+        {
+          "pitch": 2,
+          "yaw": 180,
+          "type": "scene",
+          "text": "Туркул",
+          "sceneId": "tur"
         }
       ]
     },
@@ -194,22 +307,6 @@
         {
           "pitch": 0,
           "yaw": -147,
-          "type": "scene",
-          "text": "Повернутись на Туркул",
-          "sceneId": "tur"
-        }
-      ]
-    },
-    "pim": {
-      "title": "Піп Іван Мармароський",
-      "type": "equirectangular",
-      "panorama": "panoramas/pim.jpg",
-      "pitch": 4,
-      "yaw": -10,
-      "hotSpots": [
-        {
-          "pitch": 0,
-          "yaw": 110,
           "type": "scene",
           "text": "Повернутись на Туркул",
           "sceneId": "tur"
