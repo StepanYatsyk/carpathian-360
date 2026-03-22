@@ -41,55 +41,54 @@
         { "pitch": 3, "yaw": -127, "type": "scene", "text": "Говерла", "sceneId": "goverla" },
         { "pitch": -4, "yaw": -85, "type": "scene", "text": "На Шпиці", "sceneId": "shp" },
         { "pitch": 0, "yaw": -147, "type": "scene", "text": "Повернутись на Туркул", "sceneId": "tur" },
-        { "pitch": 0, "yaw": 45, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
-        { "pitch": -2, "yaw": 60, "type": "scene", "text": "Піп Іван Чорногірський", "sceneId": "pich" }
+        { "pitch": 2, "yaw": 49, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
+        { "pitch": 2, "yaw": 57, "type": "scene", "text": "Піп Іван Чорногірський", "sceneId": "pich" }
       ]
     },
     "breb": {
       "title": "гора Бребенескул",
       "type": "equirectangular",
       "panorama": "panoramas/breb.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": -20,
+      "yaw": 17,
       "hotSpots": [
-        { "pitch": -5, "yaw": 30, "type": "scene", "text": "озеро Бребенескул", "sceneId": "breboz" },
-        { "pitch": 0, "yaw": -30, "type": "scene", "text": "Гутин Томнатик", "sceneId": "gut" },
-        { "pitch": 0, "yaw": 180, "type": "scene", "text": "Піп Іван Чорногірський", "sceneId": "pich" },
-        { "pitch": 0, "yaw": -150, "type": "scene", "text": "Ребра", "sceneId": "reb" }
+        { "pitch": -12, "yaw": -11, "type": "scene", "text": "озеро Бребенескул", "sceneId": "breboz" },
+        { "pitch": 2, "yaw": -1, "type": "scene", "text": "Гутин Томнатик", "sceneId": "gut" },
+        { "pitch": 2, "yaw": 39, "type": "scene", "text": "Піп Іван Чорногірський", "sceneId": "pich" },
+        { "pitch": 1, "yaw": -130, "type": "scene", "text": "Ребра", "sceneId": "reb" }
       ]
     },
     "breboz": {
       "title": "озеро Бребенескул",
       "type": "equirectangular",
       "panorama": "panoramas/breboz.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": 9,
+      "yaw": 96,
       "hotSpots": [
-        { "pitch": 20, "yaw": 0, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
-        { "pitch": 15, "yaw": -45, "type": "scene", "text": "Гутин Томнатик", "sceneId": "gut" }
+        { "pitch": 8, "yaw": -79, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
+        { "pitch": 27, "yaw": 55, "type": "scene", "text": "Гутин Томнатик", "sceneId": "gut" }
       ]
     },
     "gut": {
       "title": "Гутин Томнатик",
       "type": "equirectangular",
       "panorama": "panoramas/gut.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": -17,
+      "yaw": -89,
       "hotSpots": [
-        { "pitch": 0, "yaw": 45, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
-        { "pitch": -15, "yaw": 180, "type": "scene", "text": "озеро Бребенескул", "sceneId": "breboz" }
+        { "pitch": 8, "yaw": -65, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
+        { "pitch": -18, "yaw": -99, "type": "scene", "text": "озеро Бребенескул", "sceneId": "breboz" }
       ]
     },
     "pich": {
       "title": "Піп Іван Чорногірський",
       "type": "equirectangular",
       "panorama": "panoramas/pich.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": -20,
+      "yaw": 68,
       "hotSpots": [
-        { "pitch": 0, "yaw": 180, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
-        { "pitch": -2, "yaw": 135, "type": "scene", "text": "Рогеска", "sceneId": "rog" },
-        { "pitch": 0, "yaw": -160, "type": "scene", "text": "Ребра", "sceneId": "reb" }
+        { "pitch": 0, "yaw": 58, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
+        { "pitch": 2, "yaw": -134, "type": "scene", "text": "Рогеска", "sceneId": "rog" }
       ]
     },
     "rog": {
@@ -100,7 +99,7 @@
       "hotSpots": [
         { "pitch": 4, "yaw": -125, "type": "scene", "text": "Неняска", "sceneId": "nen" },
         { "pitch": 6, "yaw": -34, "type": "scene", "text": "Туркул", "sceneId": "tur" },
-        { "pitch": 0, "yaw": 45, "type": "scene", "text": "Піп Іван Чорногірський", "sceneId": "pich" }
+        { "pitch": 6, "yaw": -13, "type": "scene", "text": "Піп Іван Чорногірський", "sceneId": "pich" }
       ]
     },
     "pim": {
