@@ -76,6 +76,7 @@
       "pitch": -17,
       "yaw": -89,
       "hotSpots": [
+        { "pitch": 7, "yaw": -22, "type": "scene", "text": "Піп Іван Чорногірський", "sceneId": "pich" },
         { "pitch": 8, "yaw": -65, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
         { "pitch": -18, "yaw": -99, "type": "scene", "text": "озеро Бребенескул", "sceneId": "breboz" }
       ]
