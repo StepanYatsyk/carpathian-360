@@ -20,267 +20,15 @@
       "pitch": -16,
       "yaw": -22,
       "hotSpots": [
-        {
-          "pitch": 5,
-          "yaw": -100,
-          "type": "scene",
-          "text": "Говерла",
-          "sceneId": "goverla"
-        },
-        {
-          "pitch": -1,
-          "yaw": 30,
-          "type": "scene",
-          "text": "На Шпиці",
-          "sceneId": "shp"
-        },
-        {
-          "pitch": 3,
-          "yaw": -127,
-          "type": "scene",
-          "text": "Петрос",
-          "sceneId": "pet"
-        },
-        {
-          "pitch": -14,
-          "yaw": 31,
-          "type": "scene",
-          "text": "Озеро Несамовите",
-          "sceneId": "nes"
-        },
-        {
-          "pitch": 1,
-          "yaw": -83,
-          "type": "scene",
-          "text": "Данціж",
-          "sceneId": "dan"
-        },
-        {
-          "pitch": 1,
-          "yaw": 73,
-          "type": "scene",
-          "text": "Ребра",
-          "sceneId": "reb"
-        },
-        {
-          "pitch": 0,
-          "yaw": 143,
-          "type": "scene",
-          "text": "Піп Іван Мармароський",
-          "sceneId": "pim"
-        },
-        {
-          "pitch": 2,
-          "yaw": -75,
-          "type": "scene",
-          "text": "Хом'як",
-          "sceneId": "hom"
-        },
-        {
-          "pitch": 0,
-          "yaw": 126,
-          "type": "scene",
-          "text": "Неняска",
-          "sceneId": "nen"
-        }
-      ]
-    },
-    "pim": {
-      "title": "Піп Іван Мармароський",
-      "type": "equirectangular",
-      "panorama": "panoramas/pim.jpg",
-      "pitch": 4,
-      "yaw": -10,
-      "hotSpots": [
-        {
-          "pitch": 0,
-          "yaw": 110,
-          "type": "scene",
-          "text": "Повернутись на Туркул",
-          "sceneId": "tur"
-        },
-        {
-          "pitch": -1,
-          "yaw": 131,
-          "type": "scene",
-          "text": "Неняска",
-          "sceneId": "nen"
-        },
-        {
-          "pitch": 0,
-          "yaw": 48,
-          "type": "scene",
-          "text": "Берелебашка",
-          "sceneId": "ber"
-        }
-      ]
-    },
-    "nen": {
-      "title": "Неняска",
-      "type": "equirectangular",
-      "panorama": "panoramas/neniska.jpg",
-      "pitch": -20,
-      "yaw": 115,
-      "hotSpots": [
-        {
-          "pitch": 1,
-          "yaw": 93,
-          "type": "scene",
-          "text": "Піп Іван Мармароський",
-          "sceneId": "pim"
-        },
-        {
-          "pitch": 0,
-          "yaw": -54,
-          "type": "scene",
-          "text": "Рогеска",
-          "sceneId": "rog"
-        },
-        {
-          "pitch": 3,
-          "yaw": -139,
-          "type": "scene",
-          "text": "Туркул",
-          "sceneId": "tur"
-        }
-      ]
-    },
-    "ber": {
-      "title": "Берелебашка",
-      "type": "equirectangular",
-      "panorama": "panoramas/berlebashka.jpg",
-      "pitch": -15,
-      "yaw": 100,
-      "hotSpots": [
-        {
-          "pitch": 7,
-          "yaw": -66,
-          "type": "scene",
-          "text": "Піп Іван Мармароський",
-          "sceneId": "pim"
-        },
-        {
-          "pitch": 0,
-          "yaw": -161,
-          "type": "scene",
-          "text": "Туркул",
-          "sceneId": "tur"
-        }
-      ]
-    },
-    "rog": {
-      "title": "Рогеска",
-      "type": "equirectangular",
-      "panorama": "panoramas/rogeska.jpg",
-      "pitch": 7,
-      "yaw": -43,
-      "hotSpots": [
-        {
-          "pitch": 4,
-          "yaw": -125,
-          "type": "scene",
-          "text": "Неняска",
-          "sceneId": "nen"
-        },
-        {
-          "pitch": 6,
-          "yaw": -34,
-          "type": "scene",
-          "text": "Туркул",
-          "sceneId": "tur"
-        }
-      ]
-    },
-    "hom": {
-      "title": "Хом'як",
-      "type": "equirectangular",
-      "panorama": "panoramas/hom.jpg",
-      "pitch": -12,
-      "yaw": 70,
-      "hotSpots": [
-        {
-          "pitch": 4,
-          "yaw": -60,
-          "type": "scene",
-          "text": "Туркул",
-          "sceneId": "tur"
-        },
-        {
-          "pitch": 2,
-          "yaw": 77,
-          "type": "scene",
-          "text": "Синяк",
-          "sceneId": "syn"
-        }
-      ]
-    },
-    "syn": {
-      "title": "Синяк",
-      "type": "equirectangular",
-      "panorama": "panoramas/syn.jpg",
-      "pitch": -2,
-      "yaw": 74,
-      "hotSpots": [
-        {
-          "pitch": -1,
-          "yaw": 60,
-          "type": "scene",
-          "text": "Малий Ґорґан",
-          "sceneId": "gor"
-        },
-        {
-          "pitch": 3,
-          "yaw": -113,
-          "type": "scene",
-          "text": "Хом'як",
-          "sceneId": "hom"
-        }
-      ]
-    },
-    "gor": {
-      "title": "Малий Ґорґан",
-      "type": "equirectangular",
-      "panorama": "panoramas/gor.jpg",
-      "pitch": -3,
-      "yaw": 20,
-      "hotSpots": [
-        {
-          "pitch": 6,
-          "yaw": 25,
-          "type": "scene",
-          "text": "Довбушанка",
-          "sceneId": "dov"
-        },
-        {
-          "pitch": 5,
-          "yaw": -147,
-          "type": "scene",
-          "text": "Синяк",
-          "sceneId": "syn"
-        }
-      ]
-    },
-    "dov": {
-      "title": "Довбушанка",
-      "type": "equirectangular",
-      "panorama": "panoramas/dov.jpg",
-      "pitch": -18,
-      "yaw": 13,
-      "hotSpots": [
-        {
-          "pitch": 2,
-          "yaw": -24,
-          "type": "scene",
-          "text": "Малий Ґорґан",
-          "sceneId": "gor"
-        },
-        {
-          "pitch": 2,
-          "yaw": 11,
-          "type": "scene",
-          "text": "Туркул",
-          "sceneId": "tur"
-        }
+        { "pitch": 5, "yaw": -100, "type": "scene", "text": "Говерла", "sceneId": "goverla" },
+        { "pitch": -1, "yaw": 30, "type": "scene", "text": "На Шпиці", "sceneId": "shp" },
+        { "pitch": 3, "yaw": -127, "type": "scene", "text": "Петрос", "sceneId": "pet" },
+        { "pitch": -14, "yaw": 31, "type": "scene", "text": "Озеро Несамовите", "sceneId": "nes" },
+        { "pitch": 1, "yaw": -83, "type": "scene", "text": "Данціж", "sceneId": "dan" },
+        { "pitch": 1, "yaw": 73, "type": "scene", "text": "Ребра", "sceneId": "reb" },
+        { "pitch": 0, "yaw": 143, "type": "scene", "text": "Піп Іван Мармароський", "sceneId": "pim" },
+        { "pitch": 2, "yaw": -75, "type": "scene", "text": "Хом'як", "sceneId": "hom" },
+        { "pitch": 0, "yaw": 126, "type": "scene", "text": "Неняска", "sceneId": "nen" }
       ]
     },
     "reb": {
@@ -290,251 +38,220 @@
       "pitch": -10,
       "yaw": -117,
       "hotSpots": [
-        {
-          "pitch": 3,
-          "yaw": -127,
-          "type": "scene",
-          "text": "Говерла",
-          "sceneId": "goverla"
-        },
-        {
-          "pitch": -4,
-          "yaw": -85,
-          "type": "scene",
-          "text": "На Шпиці",
-          "sceneId": "shp"
-        },
-        {
-          "pitch": 0,
-          "yaw": -147,
-          "type": "scene",
-          "text": "Повернутись на Туркул",
-          "sceneId": "tur"
-        }
+        { "pitch": 3, "yaw": -127, "type": "scene", "text": "Говерла", "sceneId": "goverla" },
+        { "pitch": -4, "yaw": -85, "type": "scene", "text": "На Шпиці", "sceneId": "shp" },
+        { "pitch": 0, "yaw": -147, "type": "scene", "text": "Повернутись на Туркул", "sceneId": "tur" },
+        { "pitch": 0, "yaw": 45, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
+        { "pitch": -2, "yaw": 60, "type": "scene", "text": "Піп Іван Чорногірський", "sceneId": "pich" }
+      ]
+    },
+    "breb": {
+      "title": "гора Бребенескул",
+      "type": "equirectangular",
+      "panorama": "panoramas/breb.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        { "pitch": -5, "yaw": 30, "type": "scene", "text": "озеро Бребенескул", "sceneId": "breboz" },
+        { "pitch": 0, "yaw": -30, "type": "scene", "text": "Гутин Томнатик", "sceneId": "gut" },
+        { "pitch": 0, "yaw": 180, "type": "scene", "text": "Піп Іван Чорногірський", "sceneId": "pich" },
+        { "pitch": 0, "yaw": -150, "type": "scene", "text": "Ребра", "sceneId": "reb" }
+      ]
+    },
+    "breboz": {
+      "title": "озеро Бребенескул",
+      "type": "equirectangular",
+      "panorama": "panoramas/breboz.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        { "pitch": 20, "yaw": 0, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
+        { "pitch": 15, "yaw": -45, "type": "scene", "text": "Гутин Томнатик", "sceneId": "gut" }
+      ]
+    },
+    "gut": {
+      "title": "Гутин Томнатик",
+      "type": "equirectangular",
+      "panorama": "panoramas/gut.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        { "pitch": 0, "yaw": 45, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
+        { "pitch": -15, "yaw": 180, "type": "scene", "text": "озеро Бребенескул", "sceneId": "breboz" }
+      ]
+    },
+    "pich": {
+      "title": "Піп Іван Чорногірський",
+      "type": "equirectangular",
+      "panorama": "panoramas/pich.jpg",
+      "pitch": 0,
+      "yaw": 0,
+      "hotSpots": [
+        { "pitch": 0, "yaw": 180, "type": "scene", "text": "гора Бребенескул", "sceneId": "breb" },
+        { "pitch": -2, "yaw": 135, "type": "scene", "text": "Рогеска", "sceneId": "rog" },
+        { "pitch": 0, "yaw": -160, "type": "scene", "text": "Ребра", "sceneId": "reb" }
+      ]
+    },
+    "rog": {
+      "title": "Рогеска",
+      "type": "equirectangular",
+      "panorama": "panoramas/rogeska.jpg",
+      "pitch": 7, "yaw": -43,
+      "hotSpots": [
+        { "pitch": 4, "yaw": -125, "type": "scene", "text": "Неняска", "sceneId": "nen" },
+        { "pitch": 6, "yaw": -34, "type": "scene", "text": "Туркул", "sceneId": "tur" },
+        { "pitch": 0, "yaw": 45, "type": "scene", "text": "Піп Іван Чорногірський", "sceneId": "pich" }
+      ]
+    },
+    "pim": {
+      "title": "Піп Іван Мармароський",
+      "type": "equirectangular",
+      "panorama": "panoramas/pim.jpg",
+      "pitch": 4, "yaw": -10,
+      "hotSpots": [
+        { "pitch": 0, "yaw": 110, "type": "scene", "text": "Повернутись на Туркул", "sceneId": "tur" },
+        { "pitch": -1, "yaw": 131, "type": "scene", "text": "Неняска", "sceneId": "nen" },
+        { "pitch": 0, "yaw": 48, "type": "scene", "text": "Берелебашка", "sceneId": "ber" }
+      ]
+    },
+    "nen": {
+      "title": "Неняска",
+      "type": "equirectangular",
+      "panorama": "panoramas/neniska.jpg",
+      "pitch": -20, "yaw": 115,
+      "hotSpots": [
+        { "pitch": 1, "yaw": 93, "type": "scene", "text": "Піп Іван Мармароський", "sceneId": "pim" },
+        { "pitch": 0, "yaw": -54, "type": "scene", "text": "Рогеска", "sceneId": "rog" },
+        { "pitch": 3, "yaw": -139, "type": "scene", "text": "Туркул", "sceneId": "tur" }
+      ]
+    },
+    "ber": {
+      "title": "Берелебашка",
+      "type": "equirectangular",
+      "panorama": "panoramas/berlebashka.jpg",
+      "pitch": -15, "yaw": 100,
+      "hotSpots": [
+        { "pitch": 7, "yaw": -66, "type": "scene", "text": "Піп Іван Мармароський", "sceneId": "pim" },
+        { "pitch": 0, "yaw": -161, "type": "scene", "text": "Туркул", "sceneId": "tur" }
+      ]
+    },
+    "hom": {
+      "title": "Хом'як",
+      "type": "equirectangular",
+      "panorama": "panoramas/hom.jpg",
+      "pitch": -12, "yaw": 70,
+      "hotSpots": [
+        { "pitch": 4, "yaw": -60, "type": "scene", "text": "Туркул", "sceneId": "tur" },
+        { "pitch": 2, "yaw": 77, "type": "scene", "text": "Синяк", "sceneId": "syn" }
+      ]
+    },
+    "syn": {
+      "title": "Синяк",
+      "type": "equirectangular",
+      "panorama": "panoramas/syn.jpg",
+      "pitch": -2, "yaw": 74,
+      "hotSpots": [
+        { "pitch": -1, "yaw": 60, "type": "scene", "text": "Малий Ґорґан", "sceneId": "gor" },
+        { "pitch": 3, "yaw": -113, "type": "scene", "text": "Хом'як", "sceneId": "hom" }
+      ]
+    },
+    "gor": {
+      "title": "Малий Ґорґан",
+      "type": "equirectangular",
+      "panorama": "panoramas/gor.jpg",
+      "pitch": -3, "yaw": 20,
+      "hotSpots": [
+        { "pitch": 6, "yaw": 25, "type": "scene", "text": "Довбушанка", "sceneId": "dov" },
+        { "pitch": 5, "yaw": -147, "type": "scene", "text": "Синяк", "sceneId": "syn" }
+      ]
+    },
+    "dov": {
+      "title": "Довбушанка",
+      "type": "equirectangular",
+      "panorama": "panoramas/dov.jpg",
+      "pitch": -18, "yaw": 13,
+      "hotSpots": [
+        { "pitch": 2, "yaw": -24, "type": "scene", "text": "Малий Ґорґан", "sceneId": "gor" },
+        { "pitch": 2, "yaw": 11, "type": "scene", "text": "Туркул", "sceneId": "tur" }
       ]
     },
     "dan": {
       "title": "Данціж",
       "type": "equirectangular",
       "panorama": "panoramas/dan.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": 0, "yaw": 0,
       "hotSpots": [
-        {
-          "pitch": 2,
-          "yaw": -86,
-          "type": "scene",
-          "text": "Туркул",
-          "sceneId": "tur"
-        },
-        {
-          "pitch": 8,
-          "yaw": 80,
-          "type": "scene",
-          "text": "Говерла",
-          "sceneId": "goverla"
-        },
-        {
-          "pitch": 2,
-          "yaw": 49,
-          "type": "scene",
-          "text": "Петрос",
-          "sceneId": "pet"
-        }
+        { "pitch": 2, "yaw": -86, "type": "scene", "text": "Туркул", "sceneId": "tur" },
+        { "pitch": 8, "yaw": 80, "type": "scene", "text": "Говерла", "sceneId": "goverla" },
+        { "pitch": 2, "yaw": 49, "type": "scene", "text": "Петрос", "sceneId": "pet" }
       ]
     },
     "pet": {
       "title": "Петрос",
       "type": "equirectangular",
       "panorama": "panoramas/pet.jpg",
-      "pitch": 0,
-      "yaw": 13,
+      "pitch": 0, "yaw": 13,
       "hotSpots": [
-        {
-          "pitch": 2,
-          "yaw": 51,
-          "type": "scene",
-          "text": "Говерла",
-          "sceneId": "goverla"
-        },
-        {
-          "pitch": 2,
-          "yaw": 72,
-          "type": "scene",
-          "text": "Туркул",
-          "sceneId": "tur"
-        }
+        { "pitch": 2, "yaw": 51, "type": "scene", "text": "Говерла", "sceneId": "goverla" },
+        { "pitch": 2, "yaw": 72, "type": "scene", "text": "Туркул", "sceneId": "tur" }
       ]
     },
     "goverla": {
       "title": "Говерла",
       "type": "equirectangular",
       "panorama": "panoramas/goverla.jpg",
-      "pitch": 0,
-      "yaw": 160,
+      "pitch": 0, "yaw": 160,
       "hotSpots": [
-        {
-          "pitch": -7,
-          "yaw": 130,
-          "type": "scene",
-          "text": "До Заросляка",
-          "sceneId": "zar"
-        },
-        {
-          "pitch": 1,
-          "yaw": 0,
-          "type": "scene",
-          "text": "Петрос",
-          "sceneId": "pet"
-        },
-        {
-          "pitch": 0,
-          "yaw": -134,
-          "type": "scene",
-          "text": "Туркул",
-          "sceneId": "tur"
-        },
-        {
-          "pitch": -1,
-          "yaw": -149,
-          "type": "scene",
-          "text": "На Шпиці",
-          "sceneId": "shp"
-        },
-        {
-          "pitch": 0,
-          "yaw": -141,
-          "type": "scene",
-          "text": "Озеро Несамовите",
-          "sceneId": "nes"
-        },
-        {
-          "pitch": -4,
-          "yaw": -144,
-          "type": "scene",
-          "text": "Данціж",
-          "sceneId": "dan"
-        }
+        { "pitch": -7, "yaw": 130, "type": "scene", "text": "До Заросляка", "sceneId": "zar" },
+        { "pitch": 1, "yaw": 0, "type": "scene", "text": "Петрос", "sceneId": "pet" },
+        { "pitch": 0, "yaw": -134, "type": "scene", "text": "Туркул", "sceneId": "tur" },
+        { "pitch": -1, "yaw": -149, "type": "scene", "text": "На Шпиці", "sceneId": "shp" },
+        { "pitch": 0, "yaw": -141, "type": "scene", "text": "Озеро Несамовите", "sceneId": "nes" },
+        { "pitch": -4, "yaw": -144, "type": "scene", "text": "Данціж", "sceneId": "dan" }
       ]
     },
     "shp": {
       "title": "Шпиці",
       "type": "equirectangular",
       "panorama": "panoramas/shp.jpg",
-      "pitch": -22,
-      "yaw": 72,
+      "pitch": -22, "yaw": 72,
       "hotSpots": [
-        {
-          "pitch": 0,
-          "yaw": -82,
-          "type": "scene",
-          "text": "Повернутись на Говерлу",
-          "sceneId": "goverla"
-        },
-        {
-          "pitch": 10,
-          "yaw": 152,
-          "type": "scene",
-          "text": "Ребра",
-          "sceneId": "reb"
-        },
-        {
-          "pitch": 0,
-          "yaw": -121,
-          "type": "scene",
-          "text": "Туркул",
-          "sceneId": "tur"
-        },
-        {
-          "pitch": -7,
-          "yaw": -58,
-          "type": "scene",
-          "text": "Заросляк",
-          "sceneId": "zar"
-        },
-        {
-          "pitch": -6,
-          "yaw": -115,
-          "type": "scene",
-          "text": "До озера Несамовите",
-          "sceneId": "nes"
-        },
-        {
-          "pitch": -33,
-          "yaw": 71,
-          "type": "scene",
-          "text": "Під Шпицями",
-          "sceneId": "pshp"
-        }
+        { "pitch": 0, "yaw": -82, "type": "scene", "text": "Повернутись на Говерлу", "sceneId": "goverla" },
+        { "pitch": 10, "yaw": 152, "type": "scene", "text": "Ребра", "sceneId": "reb" },
+        { "pitch": 0, "yaw": -121, "type": "scene", "text": "Туркул", "sceneId": "tur" },
+        { "pitch": -7, "yaw": -58, "type": "scene", "text": "Заросляк", "sceneId": "zar" },
+        { "pitch": -6, "yaw": -115, "type": "scene", "text": "До озера Несамовите", "sceneId": "nes" },
+        { "pitch": -33, "yaw": 71, "type": "scene", "text": "Під Шпицями", "sceneId": "pshp" }
       ]
     },
     "pshp": {
       "title": "Під Шпицями",
       "type": "equirectangular",
       "panorama": "panoramas/pshp.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": 0, "yaw": 0,
       "hotSpots": [
-        {
-          "pitch": 18,
-          "yaw": -102,
-          "type": "scene",
-          "text": "Ребра",
-          "sceneId": "reb"
-        },
-        {
-          "pitch": 30,
-          "yaw": -3,
-          "type": "scene",
-          "text": "Вийти на Шпиці",
-          "sceneId": "shp"
-        }
+        { "pitch": 18, "yaw": -102, "type": "scene", "text": "Ребра", "sceneId": "reb" },
+        { "pitch": 30, "yaw": -3, "type": "scene", "text": "Вийти на Шпиці", "sceneId": "shp" }
       ]
     },
     "nes": {
       "title": "Озеро Несамовите",
       "type": "equirectangular",
       "panorama": "panoramas/nes.jpg",
-      "pitch": 0,
-      "yaw": 0,
+      "pitch": 0, "yaw": 0,
       "hotSpots": [
-        {
-          "pitch": 5,
-          "yaw": 20,
-          "type": "scene",
-          "text": "На Говерлу",
-          "sceneId": "goverla"
-        },
-        {
-          "pitch": 13,
-          "yaw": -25,
-          "type": "scene",
-          "text": "Туркул",
-          "sceneId": "tur"
-        },
-        {
-          "pitch": 22,
-          "yaw": 167,
-          "type": "scene",
-          "text": "На Шпиці",
-          "sceneId": "shp"
-        }
+        { "pitch": 5, "yaw": 20, "type": "scene", "text": "На Говерлу", "sceneId": "goverla" },
+        { "pitch": 13, "yaw": -25, "type": "scene", "text": "Туркул", "sceneId": "tur" },
+        { "pitch": 22, "yaw": 167, "type": "scene", "text": "На Шпиці", "sceneId": "shp" }
       ]
     },
     "zar": {
       "title": "База Заросляк",
       "type": "equirectangular",
       "panorama": "panoramas/zar.jpg",
-      "pitch": 10,
-      "yaw": 133,
+      "pitch": 10, "yaw": 133,
       "hotSpots": [
-        {
-          "pitch": 7,
-          "yaw": 117,
-          "type": "scene",
-          "text": "На Говерлу",
-          "sceneId": "goverla"
-        }
+        { "pitch": 7, "yaw": 117, "type": "scene", "text": "На Говерлу", "sceneId": "goverla" }
       ]
     }
   }
