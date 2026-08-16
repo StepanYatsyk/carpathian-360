@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель керування Smart TV</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 500px; margin: 0 auto; background: #f4f4f9; }
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        input { width: 100%; padding: 10px; margin-top: 5px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { width: 100%; padding: 15px; margin-top: 20px; background: #28a745; color: white; border: none; font-size: 16px; border-radius: 4px; cursor: pointer; }
+        #status { margin-top: 15px; font-weight: bold; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <h2>Керування посиланням TV</h2>
+
+    <label for="token">GitHub Token (знадобиться 1 раз):</label>
+    <input type="password" id="token" placeholder="ghp_...">
+
+    <label for="url">Нове MP4 посилання:</label>
+    <input type="url" id="url" placeholder="https://site.com/video.mp4">
+
+    <button onclick="updateLink()">Зберегти на TV</button>
+
+    <div id="status"></div>
+
+    <script>
+        const OWNER = 'StepanYatsyk';
+        const REPO = 'carpathian-360';
+        const PATH = 'tv.html';
+
+        // Завантаження збереженого токена
+        document.getElementById('token').value = localStorage.getItem('gh_token') || '';
+
+        async function updateLink() {
+            const token = document.getElementById('token').value.trim();
+            const videoUrl = document.getElementById('url').value.trim();
+            const statusDiv = document.getElementById('status');
+
+            if (!token || !videoUrl) {
+                statusDiv.style.color = 'red';
+                statusDiv.innerText = 'Заповніть усі поля!';
+                return;
+            }
+
+            localStorage.setItem('gh_token', token);
+            statusDiv.style.color = 'black';
+            statusDiv.innerText = 'Оновлення...';
+
+            try {
+                // 1. Отримуємо SHA файлу tv.html
+                const getRes = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`, {
+                    headers: { 'Authorization': `token ${token}` }
+                });
+                
+                if (!getRes.ok) throw new Error('Помилка доступу або токена');
+                const fileData = await getRes.json();
+                const sha = fileData.sha;
+
+                // 2. Формуємо новий вміст tv.html
+                const newHtmlContent = `<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart TV</title>
+    <style>
+        body { background-color: #ffffff; margin: 0; padding: 50px 20px; font-family: sans-serif; text-align: center; }
+        a { font-size: 36px; color: #0000ff; font-weight: bold; text-decoration: underline; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <a href="${videoUrl}">Дивитися фільм</a>
+</body>
+</html>`;
+
+                // 3. Кодуємо в Base64 для GitHub API
+                const encodedContent = btoa(unescape(encodeURIComponent(newHtmlContent)));
+
+                // 4. Записуємо оновлений файл
+                const putRes = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: 'Update MP4 link via admin',
+                        content: encodedContent,
+                        sha: sha
+                    })
+                });
+
+                if (putRes.ok) {
+                    statusDiv.style.color = 'green';
+                    statusDiv.innerText = 'Успішно оновлено! Зачекайте 1 хв і відкривайте TV.';
+                    document.getElementById('url').value = '';
+                } else {
+                    throw new Error('Помилка збереження файлу');
+                }
+            } catch (err) {
+                statusDiv.style.color = 'red';
+                statusDiv.innerText = err.message;
+            }
+        }
+    </script>
+</body>
+</html>
