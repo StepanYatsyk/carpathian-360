@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart TV Player</title>
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@0.14.17/dist/hls.min.js"></script>
   <style>
     * { -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: sans-serif; background: #000; color: #fff; display: block; height: 100vh; overflow: hidden; }
@@ -20,7 +19,7 @@
 <body>
 
   <div id="sidebar">
-    <h2>📺 Плейлист TV</h2>
+    <h2>🎬 Мої Фільми</h2>
     <ul id="playlist"></ul>
   </div>
 
@@ -31,7 +30,6 @@
   <script>
     var video = document.getElementById('videoPlayer');
     var playlistEl = document.getElementById('playlist');
-    var hls = null;
 
     function loadPlaylist() {
       var xhr = new XMLHttpRequest();
@@ -45,8 +43,6 @@
             } catch (e) {
               alert('Помилка обробки JSON');
             }
-          } else {
-            alert('Помилка завантаження плейлиста');
           }
         }
       };
@@ -58,42 +54,28 @@
       for (var i = 0; i < data.length; i++) {
         (function(item, index) {
           var li = document.createElement('li');
-          li.innerHTML = item.title + ' [' + item.type.toUpperCase() + ']';
+          li.innerHTML = item.title;
           li.onclick = function() {
-            playVideo(item.url, item.type, li);
+            playVideo(item.url, li);
           };
           playlistEl.appendChild(li);
 
           if (index === 0) {
-            playVideo(item.url, item.type, li);
+            playVideo(item.url, li);
           }
         })(data[i], i);
       }
     }
 
-    function playVideo(url, type, element) {
+    function playVideo(url, element) {
       var items = playlistEl.getElementsByTagName('li');
       for (var j = 0; j < items.length; j++) {
         items[j].className = '';
       }
       if (element) element.className = 'active';
 
-      if (hls) {
-        hls.destroy();
-        hls = null;
-      }
-
-      if (type === 'm3u8' && typeof Hls !== 'undefined' && Hls.isSupported()) {
-        hls = new Hls();
-        hls.loadSource(url);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, function() {
-          video.play();
-        });
-      } else {
-        video.src = url;
-        video.play();
-      }
+      video.src = url;
+      video.play();
     }
 
     loadPlaylist();
