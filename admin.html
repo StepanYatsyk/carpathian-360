@@ -1,6 +1,165 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Адмінка Плейлиста</title>
+  <style>
+    body { font-family: sans-serif; background: #f4f6f9; padding: 20px; max-width: 600px; margin: 0 auto; color: #333; }
+    h2 { margin-bottom: 15px; }
+    .card { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    label { display: block; margin-top: 10px; font-weight: bold; font-size: 14px; }
+    input, select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    button { width: 100%; padding: 12px; background: #28a745; color: #fff; border: none; border-radius: 4px; font-size: 16px; margin-top: 15px; cursor: pointer; font-weight: bold; }
+    button:hover { background: #218838; }
+    .btn-danger { background: #dc3545; padding: 6px 10px; font-size: 12px; margin-top: 0; width: auto; }
+    .btn-danger:hover { background: #c82333; }
+    ul { list-style: none; padding: 0; }
+    li { background: #fff; padding: 10px 15px; border-radius: 6px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .info { display: flex; flex-direction: column; gap: 3px; }
+    .url { font-size: 11px; color: #666; word-break: break-all; }
+    #status { margin-top: 10px; font-weight: bold; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h2>⚙️ Управління TV Плейлистом</h2>
+
+  <div class="card">
+    <label>GitHub Token:</label>
+    <input type="password" id="token" placeholder="ghp_xxxxxxxxxxxx">
+
+    <label>Назва каналу/фільму:</label>
+    <input type="text" id="title" placeholder="Наприклад: ICTV або Фільм 1">
+
+    <label>Тип потоку:</label>
+    <select id="type">
+      <option value="m3u8">m3u8 (Трансляція / HLS)</option>
+      <option value="mp4">mp4 (Відеофайл)</option>
+    </select>
+
+    <label>URL адреса:</label>
+    <input type="text" id="url" placeholder="https://domain.com/video.m3u8">
+
+    <button onclick="addItem()">➕ Додати до списку</button>
+  </div>
+
+  <h3>Поточний список:</h3>
+  <ul id="items-list"></ul>
+
+  <button onclick="saveToGithub()" style="background: #007bff;">💾 Зберегти зміни на TV</button>
+  <div id="status"></div>
+
+  <script>
+    const REPO = "StepanYatsyk/carpathian-360";
+    const FILE_PATH = "playlist.json";
+    let playlist = [];
+    let fileSha = "";
+
+    // Відновлення токена з localStorage
+    document.getElementById('token').value = localStorage.getItem('gh_token') || '';
+
+    async function fetchPlaylist() {
+      try {
+        const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`);
+        const data = await res.json();
+        fileSha = data.sha;
+        const content = decodeURIComponent(escape(atob(data.content)));
+        playlist = JSON.parse(content);
+        renderList();
+      } catch (e) {
+        console.error(e);
+        document.getElementById('status').innerText = "Помилка завантаження плейлиста з GitHub";
+      }
+    }
+
+    function renderList() {
+      const listEl = document.getElementById('items-list');
+      listEl.innerHTML = '';
+      playlist.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <div class="info">
+            <strong>${item.title} (${item.type.toUpperCase()})</strong>
+            <span class="url">${item.url}</span>
+          </div>
+          <button class="btn-danger" onclick="removeItem(${index})">❌</button>
+        `;
+        listEl.appendChild(li);
+      });
+    }
+
+    function addItem() {
+      const title = document.getElementById('title').value.trim();
+      const type = document.getElementById('type').value;
+      const url = document.getElementById('url').value.trim();
+
+      if (!title || !url) {
+        alert("Будь ласка, введіть назву та посилання!");
+        return;
+      }
+
+      playlist.push({ id: Date.now(), title, type, url });
+      renderList();
+
+      document.getElementById('title').value = '';
+      document.getElementById('url').value = '';
+    }
+
+    function removeItem(index) {
+      playlist.splice(index, 1);
+      renderList();
+    }
+
+    async function saveToGithub() {
+      const token = document.getElementById('token').value.trim();
+      if (!token) {
+        alert("Введіть GitHub Token!");
+        return;
+      }
+      localStorage.setItem('gh_token', token);
+
+      const statusEl = document.getElementById('status');
+      statusEl.innerText = "Збереження...";
+      statusEl.style.color = "orange";
+
+      const updatedContent = btoa(unescape(encodeURIComponent(JSON.stringify(playlist, null, 2))));
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`, {
+          method: "PUT",
+          headers: {
+            "Authorization": `token ${token}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            message: "Оновлення TV плейлиста через адмінку",
+            content: updatedContent,
+            sha: fileSha
+          })
+        });
+
+        if (res.ok) {
+          const resData = await res.json();
+          fileSha = resData.content.sha;
+          statusEl.innerText = "✅ Успішно збережено! Зачекайте 1 хвилину для оновлення TV.";
+          statusEl.style.color = "green";
+        } else {
+          statusEl.innerText = "❌ Помилка збереження. Перевірте Token.";
+          statusEl.style.color = "red";
+        }
+      } catch (err) {
+        statusEl.innerText = "❌ Помилка мережі.";
+        statusEl.style.color = "red";
+      }
+    }
+
+    fetchPlaylist();
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Панель керування Smart TV</title>
