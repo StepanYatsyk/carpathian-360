@@ -28,12 +28,6 @@
 <body>
 
 <div class="container">
-  <h2>⚙️ Налаштування доступу</h2>
-  <label for="token">GitHub Token:</label>
-  <input type="password" id="token" placeholder="ghp_..." onchange="saveToken()">
-
-  <hr>
-
   <h2>➕ Додати фільм (MP4)</h2>
   <label for="title">Назва фільму / відео:</label>
   <input type="text" id="title" placeholder="Наприклад: Орел і Решка">
@@ -53,6 +47,11 @@
 </div>
 
 <script>
+  // =========================================================
+  //  ВСТАВТЕ ВАШ ТОКЕН У РЯДОК НИЖЧЕ (ВСЕРЕДИНУ ОДИНОЧНИХ ДУЖОК)
+  // =========================================================
+  var HARDCODED_TOKEN = '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';
+
   var GITHUB_USER = 'stepanyatsyk';
   var GITHUB_REPO = 'carpathian-360';
   var FILE_PATH = 'playlist.json';
@@ -61,15 +60,8 @@
   var fileSha = '';
 
   window.onload = function() {
-    var savedToken = localStorage.getItem('gh_token');
-    if (savedToken) document.getElementById('token').value = savedToken;
     loadCurrentPlaylist();
   };
-
-  function saveToken() {
-    var token = document.getElementById('token').value.trim();
-    localStorage.setItem('gh_token', token);
-  }
 
   function loadCurrentPlaylist() {
     var url = 'https://api.github.com/repos/' + GITHUB_USER + '/' + GITHUB_REPO + '/contents/' + FILE_PATH;
@@ -124,9 +116,8 @@
   }
 
   function saveToGitHub() {
-    var token = localStorage.getItem('gh_token');
-    if (!token) {
-      alert('Введіть GitHub Token!');
+    if (!HARDCODED_TOKEN || HARDCODED_TOKEN === 'ghp_ВСТАВТЕ_ВАШ_ТОКЕН_СЮДИ') {
+      alert('Помилка! Ви забули вписати ваш GitHub Token в код файлу admin.html!');
       return;
     }
 
@@ -140,11 +131,11 @@
     fetch(apiUrl, {
       method: 'PUT',
       headers: {
-        'Authorization': 'token ' + token,
+        'Authorization': 'token ' + HARDCODED_TOKEN,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        message: 'Update MP4 playlist',
+        message: 'Update MP4 playlist via admin panel',
         content: updatedContent,
         sha: fileSha
       })
@@ -163,7 +154,7 @@
     })
     .catch(function(err) {
       statusEl.style.color = '#dc3545';
-      statusEl.innerText = '❌ Помилка збереження. Перевірте Token!';
+      statusEl.innerText = '❌ Помилка збереження. Перевірте, чи правильний токен вписано у код!';
     });
   }
 </script>
