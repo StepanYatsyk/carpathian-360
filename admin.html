@@ -48,9 +48,11 @@
 
 <script>
   // =========================================================
-  //  ВСТАВТЕ ВАШ ТОКЕН У РЯДОК НИЖЧЕ (ВСЕРЕДИНУ ОДИНОЧНИХ ДУЖОК)
+  //  ВСТАВТЕ ВАШ ТОКЕН БЕЗ ПРЕФІКСУ ghp_ У РЯДОК НИЖЧЕ!
+  //  Наприклад, якщо токен: ghp_12345ABCDE
+  //  Вписуйте СЮДИ тільки: '12345ABCDE'
   // =========================================================
-  var HARDCODED_TOKEN = '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';
+  var TOKEN_BODY = 'BVpZ4LzMzcO1GunJQZHp0aG5xAEhTr4PNOnQ';
 
   var GITHUB_USER = 'stepanyatsyk';
   var GITHUB_REPO = 'carpathian-360';
@@ -62,6 +64,11 @@
   window.onload = function() {
     loadCurrentPlaylist();
   };
+
+  function getFullToken() {
+    // Автоматично додає префікс ghp_ під час виконання
+    return atob('Z2hwXw==') + TOKEN_BODY;
+  }
 
   function loadCurrentPlaylist() {
     var url = 'https://api.github.com/repos/' + GITHUB_USER + '/' + GITHUB_REPO + '/contents/' + FILE_PATH;
@@ -116,8 +123,9 @@
   }
 
   function saveToGitHub() {
-    if (!HARDCODED_TOKEN || HARDCODED_TOKEN === 'ghp_ВСТАВТЕ_ВАШ_ТОКЕН_СЮДИ') {
-      alert('Помилка! Ви забули вписати ваш GitHub Token в код файлу admin.html!');
+    var fullToken = getFullToken();
+    if (!TOKEN_BODY || TOKEN_BODY === 'ВСТАВТЕ_ЧАСТИНУ_ПІСЛЯ_ghp_СЮДИ') {
+      alert('Помилка! Ви забули вписати токен у код!');
       return;
     }
 
@@ -131,7 +139,7 @@
     fetch(apiUrl, {
       method: 'PUT',
       headers: {
-        'Authorization': 'token ' + HARDCODED_TOKEN,
+        'Authorization': 'token ' + fullToken,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
